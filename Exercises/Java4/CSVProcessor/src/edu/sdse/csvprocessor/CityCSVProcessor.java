@@ -8,6 +8,8 @@ public class CityCSVProcessor {
 	
 	public void readAndProcess(File file) {
 		//Try with resource statement (as of Java 8)
+		
+		
 		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 			//Discard header row
 			br.readLine();
@@ -25,6 +27,12 @@ public class CityCSVProcessor {
 				
 				System.out.println("id: " + id + ", year: " + year + ", city: " + city + ", population: " + population);
 				
+				// Create a new CityRecord object
+				CityRecord cityRecord = new CityRecord(id, year, city, population);
+
+                // Print the CityRecord object
+                System.out.println(cityRecord);
+
 				//TODO: Extend the program to process entries!
 			}
 		} catch (Exception e) {
