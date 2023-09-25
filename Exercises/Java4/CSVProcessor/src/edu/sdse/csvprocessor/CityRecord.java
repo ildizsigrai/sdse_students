@@ -6,7 +6,7 @@ public class CityRecord {
     private String city;
     private int population;
 
-    //Constructor:
+    // Constructor:
     public CityRecord(int id, int year, String city, int population) {
         this.id = id;
         this.year = year;
@@ -14,10 +14,18 @@ public class CityRecord {
         this.population = population;
     }
 
-    //City records are formatted appropriately when printed:
+    // Getter methods for population and year:
+    public int getPopulation() {
+        return population;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    // City records are formatted appropriately when printed:
     @Override
     public String toString() {
         return "id: " + id + ", year: " + year + ", city: " + city + ", population: " + population;
     }
 }
-
